@@ -1,4 +1,5 @@
 {
+    "name": "laravel-sail-codespaces",
     "private": true,
     "type": "module",
     "scripts": {
