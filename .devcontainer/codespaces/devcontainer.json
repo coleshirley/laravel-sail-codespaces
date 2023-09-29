@@ -3,7 +3,7 @@
     "name": "Codespaces Devcontainer",
     "dockerComposeFile": [
         "../../docker-compose.yml",
-        "../../docker-compose.codepsaces.yml"
+        "../../docker-compose.codespaces.yml"
     ],
     "service": "laravel-sail-codespaces-test",
     "workspaceFolder": "/var/www/html",
