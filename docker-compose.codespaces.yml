@@ -1,0 +1,6 @@
+networks:
+    sail:
+        driver: bridge
+    fleet:
+        driver: bridge
+        external: false
