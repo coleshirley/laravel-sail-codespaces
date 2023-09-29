@@ -1,30 +1,30 @@
 // https://aka.ms/devcontainer.json
 {
-	"name": "Existing Docker Compose (Extend)",
-	"dockerComposeFile": [
-		"../docker-compose.yml"
-	],
-	"service": "laravel.test",
-	"workspaceFolder": "/var/www/html",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				// "mikestead.dotenv",
-				// "amiralizadeh9480.laravel-extra-intellisense",
-				// "ryannaddy.laravel-artisan",
-				// "onecentlin.laravel5-snippets",
-				// "onecentlin.laravel-blade"
-			],
-			"settings": {}
-		}
-	},
-	"remoteUser": "sail",
-	"postCreateCommand": {
-		"files": "chown -R 1000:1000 /var/www/html",
-		"composer": "composer install",
-		"npm": "npm install"
-	}
-	// "forwardPorts": [],
-	// "runServices": [],
-	// "shutdownAction": "none",
+    "name": "Existing Docker Compose (Extend)",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "laravel-sail-codespaces-test",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // "mikestead.dotenv",
+                // "amiralizadeh9480.laravel-extra-intellisense",
+                // "ryannaddy.laravel-artisan",
+                // "onecentlin.laravel5-snippets",
+                // "onecentlin.laravel-blade"
+            ],
+            "settings": {}
+        }
+    },
+    "remoteUser": "sail",
+    "postCreateCommand": {
+        "files": "chown -R 1000:1000 /var/www/html",
+        "composer": "composer install",
+        "npm": "npm install"
+    }
+    // "forwardPorts": [],
+    // "runServices": [],
+    // "shutdownAction": "none",
 }

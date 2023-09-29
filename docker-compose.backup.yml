@@ -1,5 +1,5 @@
 services:
-    laravel-sail-codespaces-test:
+    laravel.test:
         build:
             context: ./docker/8.2
             dockerfile: Dockerfile
@@ -9,6 +9,7 @@ services:
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
+            - '${APP_PORT:-80}:80'
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER:-1000}'
@@ -20,12 +21,8 @@ services:
             - '.:/var/www/html'
         networks:
             - sail
-            - fleet
         depends_on:
             - mysql
-        labels:
-            - traefik.http.routers.laravel-sail-codespaces-test.rule=Host(`laravel-sail-codespaces.test`)
-            - traefik.http.services.laravel-sail-codespaces-test.loadbalancer.server.port=80
     mysql:
         image: 'mysql/mysql-server:8.0'
         ports:
@@ -53,8 +50,6 @@ services:
 networks:
     sail:
         driver: bridge
-    fleet:
-        external: true
 volumes:
     sail-mysql:
         driver: local
