@@ -19,7 +19,11 @@
 		}
 	},
 	"remoteUser": "sail",
-	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
+	"postCreateCommand": {
+		"files": "chown -R 1000:1000 /var/www/html",
+		"composer": "composer install",
+		"npm": "npm install"
+	}
 	// "forwardPorts": [],
 	// "runServices": [],
 	// "shutdownAction": "none",
