@@ -24,8 +24,19 @@
         "files": "chown -R 1000:1000 /var/www/html",
         "composer": "composer install",
         "npm": "npm install"
-    }
-    // "forwardPorts": [],
+    },
+    "portsAttributes": {
+        "80": {
+            "label": "http"
+        },
+        "mysql:3306": {
+            "label": "mysql"
+        }
+    },
+    "forwardPorts": [
+        80,
+        "mysql:3306"
+    ]
     // "runServices": [],
     // "shutdownAction": "none",
 }
