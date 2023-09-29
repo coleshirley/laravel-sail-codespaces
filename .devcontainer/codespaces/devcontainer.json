@@ -1,4 +1,6 @@
 // https://aka.ms/devcontainer.json
+// run the following to port forward mysql
+// socat TCP4-LISTEN:3306,reuseaddr,fork TCP:mysql:3306
 {
     "name": "Codespaces Devcontainer",
     "dockerComposeFile": [
@@ -22,7 +24,6 @@
     "remoteUser": "sail",
     "postCreateCommand": {
         "files": "chown -R 1000:1000 /var/www/html",
-        "socat-mysql": "socat TCP4-LISTEN:3306,reuseaddr,fork TCP:mysql:3306 & ",
         "composer": "composer install",
         "npm": "npm install"
     },
