@@ -21,6 +21,10 @@
             "settings": {}
         }
     },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/sshd:1": {}
+    },
     "remoteUser": "sail",
     "postCreateCommand": {
         "files": "chown -R 1000:1000 /var/www/html",
